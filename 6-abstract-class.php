@@ -12,6 +12,11 @@ abstract class fruits{
     }
     //abstract methods are only decalared 
     abstract protected function info();
+
+    //non abstract method
+    public function sum($a,$b){
+        return $a+$b;
+    }
 }
 
 class orange extends fruits{
@@ -26,5 +31,6 @@ class orange extends fruits{
 }
 
 $obj = new orange('orange');
-$obj->info();
+// $obj->info();
+echo "<br> sum of two numbers: ".$obj->sum(3,4);
 ?>
