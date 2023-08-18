@@ -10,7 +10,7 @@
     <p>For all of its objects its property value is same</p>
     <p>If we want to use class property or method without its instance ie object</p>
     <p>then we have to declare them static after access modifier</p>
-    <p>To use static memeber of class we use double colons</p>
+    <p>To use static memeber of class we use static resolution operator ::</p>
     <p>To access non static property within class we use $this that referes</p>
     <p>to its object but static member has no object. To access it within class we use</p>
     <p>self such as self::$name instead of $this->name</p>
