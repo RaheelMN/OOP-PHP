@@ -25,6 +25,15 @@ function myErrorHandler(int $errno,string $errstr,string $errfile,int $errline){
 //creating mysqli object and connecting with db
 $conn = new mysqli('localhost','root','','test');
 
+echo "<br>".get_class($conn)." class properties ";
+echo "<pre>";
+print_r(get_class_vars('mysqli'));
+echo "</pre>";
+echo "<br>".get_class($conn)." class methods ";
+echo "<pre>";
+print_r(get_class_methods('mysqli'));
+echo "</pre>";
+
 //if there is connection error
 // if($conn->connect_error){
 //     die("Failed to connect to db: ".$conn->connect_error);
@@ -33,6 +42,15 @@ $conn = new mysqli('localhost','root','','test');
 //query to db
 $sql = "SELECT * FROM stock";
 $result = $conn->query($sql);
+
+echo "<br>".get_class($result)." class properties ";
+echo "<pre>";
+print_r(get_class_vars(get_class($result)));
+echo "</pre>";
+echo "<br>".get_class($result)." class methods ";
+echo "<pre>";
+print_r(get_class_methods(get_class($result)));
+echo "</pre>";
 
 $output = [];
 $output['error']=false;
